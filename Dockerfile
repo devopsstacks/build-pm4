@@ -15,3 +15,4 @@ RUN sudo docker-php-ext-install -j$(nproc) gd
 RUN sudo docker-php-ext-install -j$(nproc) pcntl
 RUN sudo docker-php-ext-install -j$(nproc) exif
 RUN sudo docker-php-ext-install -j$(nproc) bcmath
+RUN sudo docker-php-ext-install -j$(nproc) imagick
