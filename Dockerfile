@@ -15,6 +15,7 @@ RUN sudo docker-php-ext-install -j$(nproc) gd
 RUN sudo docker-php-ext-install -j$(nproc) pcntl
 RUN sudo docker-php-ext-install -j$(nproc) exif
 RUN sudo docker-php-ext-install -j$(nproc) bcmath
+RUN sudo apt-get update
 RUN sudo apt-get install -y libmagickwand-dev --no-install-recommends
 RUN echo -ne '\n' | sudo pecl install imagick
 RUN sudo docker-php-ext-enable imagick
