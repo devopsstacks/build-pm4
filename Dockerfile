@@ -19,3 +19,6 @@ RUN sudo apt-get update
 RUN sudo apt-get install -y libmagickwand-dev --no-install-recommends
 RUN echo -ne '\n' | sudo pecl install imagick
 RUN sudo docker-php-ext-enable imagick
+RUN sudo apt-get update && sudo apt-get install -y libc-client-dev libkrb5-dev && sudo rm -r /var/lib/apt/lists/*
+RUN sudo docker-php-ext-configure imap --with-kerberos --with-imap-ssl
+RUN sudo docker-php-ext-install -j$(nproc) imap
