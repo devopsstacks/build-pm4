@@ -1,5 +1,5 @@
 # Base Image
-FROM circleci/php:7.4-fpm-node-browsers
+FROM circleci/php:7.3-fpm-node-browsers
 
 # Maintainer
 LABEL maintainer="devops@processmaker.com"
